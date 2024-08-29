@@ -2,15 +2,10 @@
 
 A new Flutter project.
 
-## Getting Started
+## Ecommerce
 
-This project is a starting point for a Flutter application.
+This project is meant for testing out some features of flutter - I am learning it right now.
 
-A few resources to get you started if this is your first Flutter project:
+This app is mimicking a NIKE shoe shopping app. 
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+If you want to check it out, install flutter on your machine and check it out.
