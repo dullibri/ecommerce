@@ -7,12 +7,10 @@ class CartPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final cart = context.read<Cart>();
-    int itemCount = cart.userCart.length;
     return Center(
       child: Consumer<Cart>(
           builder: (context, cart, child) => ListView.builder(
-              itemCount: itemCount,
+              itemCount: cart.userCart.length,
               itemBuilder: (BuildContext context, int index) {
                 return Text(cart.userCart[index].name);
               })),
