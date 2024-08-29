@@ -1,4 +1,5 @@
 import 'package:ecommerce/models/cart.dart';
+import 'package:ecommerce/models/shoe.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -7,13 +8,40 @@ class CartPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Consumer<Cart>(
-          builder: (context, cart, child) => ListView.builder(
-              itemCount: cart.userCart.length,
-              itemBuilder: (BuildContext context, int index) {
-                return Text(cart.userCart[index].name);
-              })),
+    return Scaffold(
+      body: Consumer<Cart>(
+        builder: (context, cart, child) => Center(
+          child: cart.userCart.isEmpty
+              ? Center(
+                  child: Text('Cart ist empty'),
+                )
+              : ListView.builder(
+                  itemCount: cart.userCart.length,
+                  itemBuilder: (BuildContext context, int index) {
+                    Shoe shoe = cart.userCart[index];
+                    return Center(
+                      child: Card(
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8)),
+                        margin: EdgeInsets.only(top: 10, left: 10, right: 10),
+                        clipBehavior: Clip.antiAlias,
+                        child: ListTile(
+                          leading: Image.asset(shoe.imagePath),
+                          tileColor: Colors.white,
+                          title: Text(cart.userCart[index].name),
+                          subtitle: Text(cart.userCart[index].description),
+                          trailing: IconButton(
+                              onPressed: () {
+                                cart.removeItemFromCart(shoe: shoe);
+                              },
+                              icon: Icon(Icons.delete)),
+                        ),
+                      ),
+                    );
+                  },
+                ),
+        ),
+      ),
     );
   }
 }

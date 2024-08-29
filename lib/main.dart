@@ -3,10 +3,13 @@ import 'package:ecommerce/pages/intro_page.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-  runApp(ChangeNotifierProvider(
-    create: (context) => Cart(),
-    child: const MyApp(),
-  ));
+void main() {
+  runApp(
+    ChangeNotifierProvider(
+      create: (context) => Cart(),
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
