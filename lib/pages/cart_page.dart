@@ -26,9 +26,15 @@ class CartPage extends StatelessWidget {
                         margin: EdgeInsets.only(top: 10, left: 10, right: 10),
                         clipBehavior: Clip.antiAlias,
                         child: ListTile(
-                          leading: Image.asset(shoe.imagePath),
+                          leading: ClipRRect(
+                            borderRadius: BorderRadius.circular(12.0),
+                            child: Image.asset(shoe.imagePath),
+                          ),
                           tileColor: Colors.white,
-                          title: Text(cart.userCart[index].name),
+                          title: Text(
+                            cart.userCart[index].name,
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
                           subtitle: Text(cart.userCart[index].description),
                           trailing: IconButton(
                               onPressed: () {
