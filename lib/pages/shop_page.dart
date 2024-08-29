@@ -43,7 +43,7 @@ class _ShopPageState extends State<ShopPage> {
         ),
       ),
       Padding(
-        padding: EdgeInsets.all(18.0),
+        padding: EdgeInsets.all(14.0),
         child:
             Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
           Text(

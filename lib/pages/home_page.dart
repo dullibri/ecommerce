@@ -63,9 +63,10 @@ class _HomePageState extends State<HomePage> {
                     color: Colors.black,
                   ),
                   ListTile(
-                    // onTap: ()=>Navigator.,
+                    onTap: () => Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => ShopPage())),
                     textColor: Colors.white,
-                    title: Text('Home Page'),
+                    title: Text('Shop Page'),
                     leading: Icon(
                       Icons.home,
                       color: Colors.white,

@@ -17,9 +17,16 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: IntroPage(),
+      home: const IntroPage(),
+      // builder: (context, child) {
+      //   return MediaQuery(
+      //     data: MediaQuery.of(context)
+      //         .copyWith(textScaler: TextScaler.linear(1.0)),
+      //     child: child!,
+      //   );
+      // },
     );
   }
 }
